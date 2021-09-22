@@ -1,1 +1,3 @@
-# saycure.github.io
+# SayCure SOC By CryptoGen Nepal
+
+The SayCure Platform Is A Custom-Built Monitoring, Detection, And Response System That Visualizes And Neutralizes Threats Before They Have A Negative Impact On Your Business. The SayCure Platform Was Created To Meet A Variety Of Information Security (IS) And Information Technology (IT) Requirements. SayCure Is More Than Just A Platform; It's A Combination Of Trained, Skilled, And Certified Resources And Technology, As Our Monitoring Team Is On The Lookout 24 Hours A Day, Seven Days A Week To Proactively Hunt For Threats, Respond To Alarms, And Create A Proper Plan To Safeguard Your Business (S).

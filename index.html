@@ -4,6 +4,7 @@
 <head>
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126895171-1"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LdzyJ0cAAAAAJznQtsrcFeXcUa7Ia-yHnBH5cbA"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -286,7 +287,7 @@
               </div>
               <div class="row">
                 <div class="col">
-                  <form action="https://script.google.com/macros/s/AKfycbyZmth-R9y8CuVE1HA_pHRuPjsJXtZt1qH2AypEbMKNJ6nKTO8rlS6cf2MEHPhX9rCj-w/exec" method="POST" class="gform">
+                  <form action="[Enter value Here]" method="POST" class="gform">
                     <div class="form-group mb-2">
                       <div class="input-group border-0">
                         <div class="input-group-prepend">
@@ -294,7 +295,7 @@
                             <i class="now-ui-icons users_circle-08 lg"></i>
                           </span>
                         </div>
-                        <input type="text" autocomplete="off" class="form-control" id="inlineFormInputGroup" placeholder="Full Name" name="FullName" required="required">
+                        <input type="text" autocomplete="off" class="form-control" id="inlineFormInputGroup" placeholder="Full Name" name="fullName" required="required">
                       </div>
                     </div>
                     <div class="form-group mb-2">
@@ -304,7 +305,7 @@
                             <i class="now-ui-icons business_badge lg"></i>
                           </span>
                         </div>
-                        <input type="text" autocomplete="off" class="form-control" id="inlineFormInputGroup" placeholder="Organization" name="Organization" required="required">
+                        <input type="text" autocomplete="off" class="form-control" id="inlineFormInputGroup" placeholder="Organization" name="organization" required="required">
                       </div>
                     </div>
                     <div class="form-group mb-3">
@@ -314,10 +315,12 @@
                             <i class="now-ui-icons ui-1_email-85 lg"></i>
                           </span>
                         </div>
-                        <input type="text" autocomplete="off" class="form-control" id="inlineFormInputGroup" placeholder="Email" name="Email" required="required">
+                        <input type="text" autocomplete="off" class="form-control" id="inlineFormInputGroup" placeholder="Email" name="email" required="required">
+                        <input type="hidden" id="g-recaptcha-response" name="captchaRep">
                       </div>
                     </div>
-                    <button type="submit" class="btn mt-4 mb-3 btn-light rounded btn-lg text-primary">Request</button>
+                    <button type="submit" class="btn mt-4 mb-3 btn-light rounded btn-lg text-primary">Request <i class="fa fa-spinner fa-pulse fa-fw spinner"></i>
+<span class="sr-only">Loading...</span></button>
                   </form>
                 </div>
               </div>
@@ -373,7 +376,7 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="ThankYouDemo">
+  <div class="modal fade" id="ResponseModal">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header bg-secondary">
@@ -403,6 +406,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="assets/js/parallax.js"></script>
+  <script type="text/javascript">
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6LdzyJ0cAAAAAJznQtsrcFeXcUa7Ia-yHnBH5cbA', {action:'send_message'})
+                  .then(function(token) {
+            document.getElementById('g-recaptcha-response').value = token;
+        });
+    });
+  </script>
   <script type="text/javascript" data-cfasync="false" src="assets/js/gForm.js"></script>
  </body>
 

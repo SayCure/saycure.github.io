@@ -82,7 +82,7 @@
           spinner.style.display="none";
 
           if(response) {
-            title.innerText = "Thank you";
+            title.innerText = "Thank You";
           } else {
             title.innerText = "Error";
           }

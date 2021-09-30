@@ -1,5 +1,8 @@
 (function() {
   // get all data in form and return object
+  var spinner = document.querySelector(".spinner");
+  spinner.style.display="none";
+
   function getFormData(form) {
     var elements = form.elements;
     var honeypot;
@@ -43,36 +46,53 @@
 
     // add form-specific values into the data
     formData.formDataNameOrder = JSON.stringify(fields);
-    formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
+    formData.formGoogleSheetName = form.dataset.sheet || "responses";
     formData.formGoogleSendEmail
-      = form.dataset.email || ""; // no email by default
+      = form.dataset.email || "";
 
     return {data: formData, honeypot: honeypot};
   }
 
-  function handleFormSubmit(event) {  // handles form submit without any jquery
-    event.preventDefault();           // we are submitting via xhr below
+  function handleFormSubmit(event) {
+    event.preventDefault();
     var form = event.target;
     var formData = getFormData(form);
     var data = formData.data;
 
-    // If a honeypot field is filled, assume it was done so by a spam bot.
     if (formData.honeypot) {
       return false;
     }
 
-    // disableAllButtons(form);
+    disableAllButtons(form);
+    spinner.style.display="inline-block";
     var url = form.action;
     var xhr = new XMLHttpRequest();
     xhr.open('POST', url);
-    // xhr.withCredentials = true;
+
+
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
           form.reset();
-          var thankYouMessage = document.querySelector("#ThankYouDemo");
+          var thankYouMessage = document.querySelector("#ResponseModal");
+          var body = thankYouMessage.querySelector(".modal-body");
+          var title = thankYouMessage.querySelector(".modal-title");
+          var b =  JSON.parse(xhr.response);
+          var response = JSON.parse(b.data).success;
+          spinner.style.display="none";
+
+          if(response) {
+            title.innerText = "Thank you";
+          } else {
+            title.innerText = "Error";
+          }
+          var messageToDisplay = JSON.parse(b.data).message;
+
+          body.innerText = messageToDisplay;
+
           if (thankYouMessage) {
-            $("#ThankYouDemo").modal();
+            $("#ResponseModal").modal();
+            enableButton(form);
           }
         }
     };
@@ -97,6 +117,13 @@
     var buttons = form.querySelectorAll("button");
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].disabled = true;
+    }
+  }
+
+  function enableButton(form) {
+    var buttons = form.querySelectorAll("button");
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].disabled = false;
     }
   }
 })();

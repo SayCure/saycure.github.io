@@ -360,7 +360,7 @@
         </div>
         <div class="col-12 col-sm-6 pr-0 text-right d-flex justify-content-center justify-content-md-end">
           <li class="list-inline-item text-light mb-4">
-            <small> © 2021, Designed by <a href="https://www.cryptogennepal.com/" target="_blank" class="text-white">CryptoGen Nepal</a></small>
+		  <small> © <div id='date'>2021</div>, Designed by <a href="https://www.cryptogennepal.com/" target="_blank" class="text-white">CryptoGen Nepal</a></small>
           </li>
         </div>
       </div>
@@ -416,10 +416,8 @@
             document.getElementById('g-recaptcha-response').value = token;
         });
     });
-  </script>
-  <script type="text/javascript" data-cfasync="false" src="assets/js/gForm.js"></script>
-  <script>
-	window.fwSettings={
+    
+    window.fwSettings={
 		'widget_id':82000005427
 	};
 	!function(){
@@ -430,8 +428,12 @@
 			n.q=[],window.FreshworksWidget=n
 		}
 	}()
-</script>
-<script type='text/javascript' src='https://ind-widget.freshworks.com/widgets/82000005427.js' async defer></script>
+	  
+     var date = new Date();
+     document.getElementById('date').innerText=date.getFullYear();
+  </script>
+  <script type="text/javascript" data-cfasync="false" src="assets/js/gForm.js"></script>
+  <script type='text/javascript' src='https://ind-widget.freshworks.com/widgets/82000005427.js' async defer></script>
  </body>
 
 </html>

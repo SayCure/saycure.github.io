@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:#fff;display:block;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+<circle cx="18" cy="50" r="4" fill="#212d4f">
+  <animate attributeName="cy" values="40;60;40" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="0s" repeatCount="indefinite"></animate>
+</circle><circle cx="27" cy="57.071067811865476" r="4" fill="#566387">
+  <animate attributeName="cy" values="40;60;40" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.125s" repeatCount="indefinite"></animate>
+</circle><circle cx="36" cy="60" r="4" fill="#808aa5">
+  <animate attributeName="cy" values="40;60;40" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.25s" repeatCount="indefinite"></animate>
+</circle><circle cx="45" cy="57.071067811865476" r="4" fill="#d5d8e1">
+  <animate attributeName="cy" values="40;60;40" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.375s" repeatCount="indefinite"></animate>
+</circle><circle cx="54" cy="50" r="4" fill="#212d4f">
+  <animate attributeName="cy" values="40;60;40" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.5s" repeatCount="indefinite"></animate>
+</circle><circle cx="63" cy="42.928932188134524" r="4" fill="#566387">
+  <animate attributeName="cy" values="40;60;40" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.625s" repeatCount="indefinite"></animate>
+</circle><circle cx="72" cy="40" r="4" fill="#808aa5">
+  <animate attributeName="cy" values="40;60;40" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.75s" repeatCount="indefinite"></animate>
+</circle><circle cx="81" cy="42.928932188134524" r="4" fill="#d5d8e1">
+  <animate attributeName="cy" values="40;60;40" times="0;0.5;1" dur="1s" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" begin="-0.875s" repeatCount="indefinite"></animate>
+</circle>
+</svg>

@@ -1,0 +1,16 @@
+{
+    "saycure": [
+        {
+            "version": "2.0",
+            "dependencies": {
+                "agent": "4.5.1"
+            }
+        },
+        {
+            "version": "2.1",
+            "dependencies": {
+                "agent": "4.5.2"
+            }
+        }
+    ]
+}
